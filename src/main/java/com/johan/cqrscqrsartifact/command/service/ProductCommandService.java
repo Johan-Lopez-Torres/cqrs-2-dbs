@@ -1,7 +1,7 @@
-package com.johan.cqrscqrsartifact.command;
+package com.johan.cqrscqrsartifact.command.service;
 
-import com.johan.cqrscqrsartifact.Product;
-import com.johan.cqrscqrsartifact.ProductRepository;
+import com.johan.cqrscqrsartifact.command.entity.Product;
+import com.johan.cqrscqrsartifact.command.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 @Service

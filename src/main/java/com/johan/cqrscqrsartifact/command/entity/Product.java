@@ -1,4 +1,4 @@
-package com.johan.cqrscqrsartifact;
+package com.johan.cqrscqrsartifact.command.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

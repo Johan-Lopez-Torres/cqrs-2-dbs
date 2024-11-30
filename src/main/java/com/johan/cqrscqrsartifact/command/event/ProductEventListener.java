@@ -1,7 +1,7 @@
-package com.johan.cqrscqrsartifact;
+package com.johan.cqrscqrsartifact.command.event;
 
-import com.johan.cqrscqrsartifact.query.ProductQuery;
-import com.johan.cqrscqrsartifact.query.ProductQueryRepository;
+import com.johan.cqrscqrsartifact.query.entity.ProductQuery;
+import com.johan.cqrscqrsartifact.query.repository.ProductQueryRepository;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 

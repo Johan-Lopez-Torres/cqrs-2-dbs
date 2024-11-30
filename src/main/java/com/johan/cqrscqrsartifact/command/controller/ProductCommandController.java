@@ -1,6 +1,7 @@
-package com.johan.cqrscqrsartifact.command;
+package com.johan.cqrscqrsartifact.command.controller;
 
-import com.johan.cqrscqrsartifact.Product;
+import com.johan.cqrscqrsartifact.command.entity.Product;
+import com.johan.cqrscqrsartifact.command.service.ProductCommandService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

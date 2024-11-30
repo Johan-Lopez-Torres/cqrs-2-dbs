@@ -1,5 +1,7 @@
-package com.johan.cqrscqrsartifact.query;
+package com.johan.cqrscqrsartifact.query.service;
 
+import com.johan.cqrscqrsartifact.query.repository.ProductQueryRepository;
+import com.johan.cqrscqrsartifact.query.entity.ProductQuery;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

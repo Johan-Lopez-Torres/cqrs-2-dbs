@@ -1,4 +1,4 @@
-package com.johan.cqrscqrsartifact;
+package com.johan.cqrscqrsartifact.command.event;
 
 import lombok.Data;
 

@@ -1,5 +1,7 @@
-package com.johan.cqrscqrsartifact.query;
+package com.johan.cqrscqrsartifact.query.controller;
 
+import com.johan.cqrscqrsartifact.query.entity.ProductQuery;
+import com.johan.cqrscqrsartifact.query.service.ProductQueryService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
