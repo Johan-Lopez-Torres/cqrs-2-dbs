@@ -11,18 +11,21 @@ public class ProductCommandService {
     private final ProductRepository productRepository;
     private final ApplicationEventPublisher applicationEventPublisher;
 
-    public ProductCommandService(ProductRepository productRepository, ApplicationEventPublisher applicationEventPublisher) {
+    public ProductCommandService(ProductRepository productRepository,
+                                 ApplicationEventPublisher applicationEventPublisher) {
         this.productRepository = productRepository;
         this.applicationEventPublisher = applicationEventPublisher;
     }
+
+
 
     public Product createProduct(String name, Double price) {
         Product product = new Product();
         product.setName(name);
         product.setPrice(price);
-        ProductCreatedEvent productCreatedEvent = new ProductCreatedEvent(this, product.getId(), product.getName(), product.getPrice());
+        Product savedProduct = productRepository.save(product);
+        ProductCreatedEvent productCreatedEvent = new ProductCreatedEvent(this, savedProduct.getId(), savedProduct.getName(), savedProduct.getPrice());
         applicationEventPublisher.publishEvent(productCreatedEvent);
-        return productRepository.save(product);
-
+        return savedProduct;
     }
 }

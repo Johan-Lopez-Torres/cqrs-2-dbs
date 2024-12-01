@@ -8,6 +8,10 @@ import org.springframework.context.ApplicationEvent;
 @Setter
 public class ProductCreatedEvent extends ApplicationEvent {
 
+    private Long productId;
+    private String name;
+    private Double price;
+
     public ProductCreatedEvent(Object source, Long productId, String name, Double price) {
         super(source);
         this.productId = productId;
@@ -15,9 +19,6 @@ public class ProductCreatedEvent extends ApplicationEvent {
         this.price = price;
     }
 
-    private Long productId;
-    private String name;
-    private Double price;
 
-    // Constructor, getters y setters
+
 }
