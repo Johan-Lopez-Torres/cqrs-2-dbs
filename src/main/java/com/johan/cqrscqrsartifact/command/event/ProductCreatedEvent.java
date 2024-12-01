@@ -1,9 +1,20 @@
 package com.johan.cqrscqrsartifact.command.event;
 
-import lombok.Data;
+import lombok.*;
+import org.springframework.context.ApplicationEvent;
 
-@Data
-public class ProductCreatedEvent {
+
+@Getter
+@Setter
+public class ProductCreatedEvent extends ApplicationEvent {
+
+    public ProductCreatedEvent(Object source, Long productId, String name, Double price) {
+        super(source);
+        this.productId = productId;
+        this.name = name;
+        this.price = price;
+    }
+
     private Long productId;
     private String name;
     private Double price;
